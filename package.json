@@ -6,7 +6,8 @@
   "esy": {
     "buildsInSource": true,
     "buildEnv": {
-      "CC": "#{os == 'windows' ? 'x86_64-w64-mingw32-gcc' : 'cc'}"
+      "CC": "#{os == 'windows' ? 'x86_64-w64-mingw32-gcc' : ''}",
+      "CXX": "#{os == 'windows' ? 'x86_64-w64-mingw32-g++' : ''}"
     },
     "build": [
       "./bootstrap --prefix=#{self.install}",
